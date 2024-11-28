@@ -109,7 +109,7 @@ public class Robot {
 
     public void girarALaDerecha() {
         Orientacion nuevaOrientacion = null;
-        switch (orientacion){
+        switch (orientacion) {
             case NORTE -> nuevaOrientacion = Orientacion.NORESTE;
             case NORESTE -> nuevaOrientacion = Orientacion.ESTE;
             case ESTE -> nuevaOrientacion = Orientacion.SURESTE;
