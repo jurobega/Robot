@@ -48,7 +48,6 @@ public class Robot {
             throw new IllegalArgumentException("La coordenada no pertenece a la zona." );
         }
         this.coordenada = coordenada;
-
     }
 
     public Orientacion getOrientacion() {
