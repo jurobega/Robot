@@ -38,28 +38,25 @@ public class Consola {
     }
 
     public static void mostrarMenuOrientacion() {
-        System.out.println("Norte.");
-        System.out.println("Noreste");
-        System.out.println("Este.");
-        System.out.println("Sureste.");
-        System.out.println("Sur.");
-        System.out.println("Suroeste.");
-        System.out.println("Oeste.");
-        System.out.println("Noroeste.");
+        System.out.println("0-Norte.");
+        System.out.println("1-Noreste");
+        System.out.println("2-Este.");
+        System.out.println("3-Sureste.");
+        System.out.println("4-Sur.");
+        System.out.println("5-Suroeste.");
+        System.out.println("6-Oeste.");
+        System.out.println("7-Noroeste.");
     }
 
     public static Orientacion elegirOrientacion() {
         mostrarMenuOrientacion();
-        String opcion;
-        Orientacion orientacion;
-        int i;
+        int opcion;
         do {
-            System.out.println("Dame la orientación del robot: ");
-            opcion = Entrada.cadena();
-            orientacion = Orientacion.valueOf(opcion);
-            i = orientacion.ordinal();
-        } while ( i > 7 );
-        return orientacion;
+            System.out.println("Elige una orientación: ");
+            opcion = Entrada.entero();
+        }while ( opcion < 0 || opcion > 7);
+        return Orientacion.values()[opcion];
+
     }
 
     public static Coordenada elegirCoordenada() {
